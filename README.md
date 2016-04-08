@@ -2,10 +2,17 @@
 ###### Gareth Lynskey, G00312651
 
 ## Introduction
-For my project I have to design a neo4j graph database of all the constituencies in the Republic of Ireland.
+For my project I have to design a neo4j graph database for the constituencies in the Republic of Ireland, the candidates that ran in those constituencies and create a relationship between them.
 
 ## Database
-Explain how you created your database, and how information is represented in it.
+First I began by creating the 40 constituencies in Ireland.The line below is an example of how I created a single node(constituency) with labels and properties in order to make it unique.
+```
+create (`nCarlow–Kilkenny`:Constituency {name: "Carlow–Kilkenny", population:145659, seats:5, boundary_areas_description: "The county of Kilkenny and the county of Carlow, except the part thereof which is comprised in the constituency of Wicklow." })
+```
+Then I started creating all of the candidates who ran in those constituencies.
+```
+Create (`nCatherine Byrne`:Candidates {id:85, name:"Catherine Byrne", party:"Fine Gael", gender:"Female", constituency:"Dublin South-Central", age:59, elected:"Yes"})
+```
 
 ## Queries
 Summarise your three queries here.
