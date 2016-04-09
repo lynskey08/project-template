@@ -7,11 +7,13 @@ For my project I have to design a neo4j graph database for the constituencies in
 ## Database
 First I began by creating the 40 constituencies in Ireland.The line below is an example of how I created a single node(constituency) with labels and properties in order to make it unique.
 ```
-create (`nCarlow–Kilkenny`:Constituency {name: "Carlow–Kilkenny", population:145659, seats:5, boundary_areas_description: "The county of Kilkenny and the county of Carlow, except the part thereof which is comprised in the constituency of Wicklow." })
+create (`nCarlow–Kilkenny`:Constituency {name: "Carlow–Kilkenny", population:145659, seats:5, boundary_areas_description: 
+"The county of Kilkenny and the county of Carlow, except the part thereof which is comprised in the constituency of Wicklow." })
 ```
 I started creating all of the candidates who ran in those constituencies.
 ```
-Create (`nCatherine Byrne`:Candidates {id:85, name:"Catherine Byrne", party:"Fine Gael", gender:"Female", constituency:"Dublin South-Central", age:59, elected:"Yes"})
+Create (`nCatherine Byrne`:Candidates {id:85, name:"Catherine Byrne", party:"Fine Gael", gender:"Female",
+constituency:"Dublin South-Central", age:59, elected:"Yes"})
 ```
 Once the candidates and constituencies were made I began to make relationships between a node from each of them.
 In the example below I took the constituency property from where a candidate is located and the name of a constituency and made the relationship between them.The relationship will work for all other candidates in that constituency as long as their constituency name is the same.
@@ -26,34 +28,38 @@ match (n{party:"Fine Gael"}), (d{name:"Fine Gael"}) create (n)-[r:MEMBER_OF]->(d
 ```
 
 ## Queries
-Summarise your three queries here.
-Then explain them one by one in the following sections.
+1.Find the political party that has the biggest number of female candidates.
+2.Find the political party that has the biggest number of elected female candidates.
+3.Find the party with the lowest number of candidates
 
-#### Query one title
-This query retreives the Bacon number of an actor...
+#### Query One
+This query retreives the candidates that are a member of a party,that are female 
+and must return the party that has the highest number of female candidates.
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party) 
+WHERE n.gender = 'Female' 
+RETURN p, count(*) AS c 
+ORDER BY c DESC LIMIT 1
 ```
 
-#### Query two title
-This query retreives the Bacon number of an actor...
+#### Query Two
+Similar to the first query, it retreives the candidates that are a member of a party, 
+have been elected and are female and must return that party with the highest number 
+of female candiates that have been elected.
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party) 
+WHERE n.elected = 'Yes' 
+AND n.gender = 'Female'
+RETURN p, count(*) AS c 
+ORDER BY c DESC LIMIT 1
 ```
 
-#### Query three title
-This query retreives the Bacon number of an actor...
+#### Query Three
+This query retreives the party with the lowest number of candidates.
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH (p:Party)
+RETURN p, size((p)<-[:MEMBER_OF]-()) as c
+ORDER BY c ASC LIMIT 1
 ```
 
 ## References
