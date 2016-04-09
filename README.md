@@ -13,10 +13,16 @@ I started creating all of the candidates who ran in those constituencies.
 ```
 Create (`nCatherine Byrne`:Candidates {id:85, name:"Catherine Byrne", party:"Fine Gael", gender:"Female", constituency:"Dublin South-Central", age:59, elected:"Yes"})
 ```
-Once the candidates and constituencies were made I began to create relationships between a node from each of them.
-In the example below I took the constituency property from where a candidate is located and the name of a constituency and made the relationship between them.The relationship will work for all other candidates located in that constituency.
+Once the candidates and constituencies were made I began to make relationships between a node from each of them.
+In the example below I took the constituency property from where a candidate is located and the name of a constituency and made the relationship between them.The relationship will work for all other candidates in that constituency as long as their constituency name is the same.
 ```
 match (n{constituency:"Carlow-Kilkenny"}), (a{name:"Carlow–Kilkenny"}) create (n)-[r:RAN_IN]->(a) return n,a
+```
+Then I decided to create all of the political parties in Ireland and make a relationship between them and the candidates.
+```
+Create (`nFine Gael`: Party{name:"Fine Gael", leader:"Enda Kenny", colours:"Blue", candidates: 87, elected: 49})
+
+match (n{party:"Fine Gael"}), (d{name:"Fine Gael"}) create (n)-[r:MEMBER_OF]->(d) return n,d
 ```
 
 ## Queries
