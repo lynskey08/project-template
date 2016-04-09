@@ -1,6 +1,7 @@
 // This query finds the party
 // with the highest number of
-// elected females.
+// female candidates that
+// were elected.
 
 
 MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party) 
