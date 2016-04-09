@@ -2391,3 +2391,16 @@ RETURN r;
 2016-04-09 15:59:17.347+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 18679130ms.
 2016-04-09 16:34:11.211+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 501ms.
 2016-04-09 17:34:11.821+0000 WARN  [o.n.k.i.c.MonitorGc] GC Monitor: Application threads blocked for 599ms.
+2016-04-09 18:19:20.394+0000 INFO  [o.n.k.i.f.GraphDatabaseFacade] Shutdown started
+2016-04-09 18:19:20.493+0000 INFO  [o.n.k.i.f.CommunityFacadeFactory] Database is now unavailable
+2016-04-09 18:19:20.554+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [165]:  Starting check pointing...
+2016-04-09 18:19:20.554+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [165]:  Starting store flush...
+2016-04-09 18:19:20.653+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [165]:  Store flush completed
+2016-04-09 18:19:20.655+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [165]:  Starting appending check point entry into the tx log...
+2016-04-09 18:19:20.703+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [165]:  Appending check point entry into the tx log completed
+2016-04-09 18:19:20.708+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by database shutdown [165]:  Check pointing completed
+2016-04-09 18:19:20.712+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2016-04-09 18:19:20.715+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2016-04-09 18:19:22.510+0000 INFO  [o.n.k.NeoStoreDataSource] NeoStores closed
+2016-04-09 18:19:22.515+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics START ---
+2016-04-09 18:19:22.516+0000 INFO  [o.n.k.i.DiagnosticsManager] --- STOPPING diagnostics END ---
