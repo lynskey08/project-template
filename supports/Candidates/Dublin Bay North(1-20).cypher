@@ -1,0 +1,22 @@
+// This query creates nodes representing all candidates in Dublin Bay North.
+
+Create (`nRichard Bruton`:Candidates {id:1, name:"Richard Bruton", party:"Fine Gael", gender:"Male", constituency:"Dublin Bay North", age:62, elected:"Yes"}),
+(`nSeán Haughey`:Candidates {id:2, name:"Seán Haughey", party:"Fianna Fail", gender:"Male", constituency:"Dublin Bay North", age:53, elected:"Yes"}),
+(`nTommy Broughan`:Candidates {id:3, name:"Tommy Broughan", party:"Independents 4 Change", gender:"68", constituency:"Dublin Bay North", age:68, elected:"Yes"}),
+(`nDenise Mitchell`:Candidates {id:4, name:"Denise Mitchell", party:"Sinn Fein", gender:"Female", constituency:"Dublin Bay North", age:45, elected:"Yes"}),
+(`nFinian McGrath`:Candidates {id:5, name:"Finian McGrath", party:"Independent", gender:"Male", constituency:"Dublin Bay North", age:62, elected:"Yes"}),
+(`nAodhan O Riordain`:Candidates {id:6, name:"Aodhan O Riordain", party:"Labour", gender:"Male", constituency:"Dublin Bay North", age:39, elected:"No"}),
+(`nJohn Lyons`:Candidates {id:7, name:"John Lyons", party:"AAA-PBP", gender:"Male", constituency:"Dublin Bay North", age:36, elected:"No"}),
+(`nAveril Power`:Candidates {id:8, name:"Averil Power", party:"Independent", gender:"Female", constituency:"Dublin Bay North", age:37, elected:"No"}),
+(`nCian O'Callaghan`:Candidates {id:9, name:"Cian O'Callaghan", party:"Social Democrats", gender:"Male", constituency:"Dublin Bay North", age:36, elected:"No"}),
+(`nDeirdre Heney`:Candidates {id:10, name:"Deirdre Heney", party:"Fianna Fail", gender:"Female", constituency:"Dublin Bay North", age:"N/A", elected:"No"}),
+(`nMicheal Mac Donncha`:Candidates {id:11, name:"Micheal Mac Donncha", party:"Sinn Fein", gender:"Male", constituency:"Dublin Bay North", age:53, elected:"No"}),
+(`nTerence Flanagan`:Candidates {id:12, name:"Terence Flanagan", party:"Renua Ireland", gender:"Male", constituency:"Dublin Bay North", age:40, elected:"No"}),
+(`nNaoise O Muiri`:Candidates {id:13, name:"Naoise O Muiri", party:"Fine Gael", gender:"Male", constituency:"Dublin Bay North", age:"N/A", elected:"No"}),
+(`nMichael O'Brien`:Candidates {id:14, name:"Michael O'Brien", party:"AAA-PBP", gender:"Male", constituency:"Dublin Bay North", age:40, elected:"No"}),
+(`nStephanie Regan`:Candidates {id:15, name:"Stephanie Regan", party:"Fine Gael", gender:"Female", constituency:"Dublin Bay North", age:57, elected:"No"}),
+(`nDamien O'Neill`:Candidates {id:16, name:"Damien O'Neill", party:"Independent", gender:"Male", constituency:"Dublin Bay North", age:"N/A", elected:"No"}),
+(`nDonna Cooney`:Candidates {id:17, name:"Donna Cooney", party:"Green Party", gender:"Female", constituency:"Dublin Bay North", age:47, elected:"No"}),
+(`nJimmy Guerin`:Candidates {id:18, name:"Jimmy Guerin", party:"Independent", gender:"Male", constituency:"Dublin Bay North", age:56, elected:"No"}),
+(`nPaul Clarke`:Candidates {id:19, name:"Paul Clarke", party:"Independent", gender:"Male", constituency:"Dublin Bay North", age:32, elected:"No"}),
+(`nProinsias O Conarain`:Candidates {id:20, name:"Proinsias O Conarain", party:"Independent", gender:"Male", constituency:"Dublin Bay North", age:"N/A", elected:"No"})
