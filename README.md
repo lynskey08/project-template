@@ -20,7 +20,7 @@ In the example below I took the constituency property from where a candidate is 
 ```
 match (n{constituency:"Carlow-Kilkenny"}), (a{name:"Carlow–Kilkenny"}) create (n)-[r:RAN_IN]->(a) return n,a
 ```
-Then I decided to create all of the political parties in Ireland and make a relationship between them and the candidates.
+Then I decided to create all of the political parties in Ireland and makd a relationship between them and the candidates.
 ```
 Create (`nFine Gael`: Party{name:"Fine Gael", leader:"Enda Kenny", colours:"Blue", candidates: 87, elected: 49})
 
@@ -28,12 +28,12 @@ match (n{party:"Fine Gael"}), (d{name:"Fine Gael"}) create (n)-[r:MEMBER_OF]->(d
 ```
 
 ## Queries
-1.Find the political party that has the biggest number of female candidates.
-2.Find the political party that has the biggest number of elected female candidates.
+1.Find the political party that has the highest number of female candidates.
+2.Find the political party that has the highest number of elected female candidates.
 3.Find the party with the lowest number of candidates
 
 #### Query One
-This query retreives the candidates that are a member of a party,that are female 
+This query retreives the candidates that are a member of a party and are female, 
 and must return the party that has the highest number of female candidates.
 ```cypher
 MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party) 
@@ -43,9 +43,9 @@ ORDER BY c DESC LIMIT 1
 ```
 
 #### Query Two
-Similar to the first query, it retreives the candidates that are a member of a party, 
-have been elected and are female and must return that party with the highest number 
-of female candiates that have been elected.
+This query retreives the candidates that are a member of a party 
+that have been elected and are female and must return that party with the highest 
+number of female candiates that have been elected.
 ```cypher
 MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party) 
 WHERE n.elected = 'Yes' 
