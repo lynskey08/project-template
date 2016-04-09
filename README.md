@@ -72,3 +72,7 @@ ORDER BY c ASC LIMIT 1
 4.[Wikipedia website - Irish Parties](https://en.wikipedia.org/wiki/List_of_political_parties_in_the_Republic_of_Ireland), the website with information on all Irish Parties in government.
 
 5.[Wikipedia website - Irish Parties](https://en.wikipedia.org/wiki/Irish_general_election,_2016), more information the Irish Parties in government.
+
+6.[Youtube website](https://www.youtube.com/watch?v=LTdOgvpsR3c), tutorial for importing cypher queries.
+
+7.I discussed idea's on queries with the following students: Chris Weir, Keith Langan and Patrick Griffin.
