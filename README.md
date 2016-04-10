@@ -28,16 +28,15 @@ match (n{party:"Fine Gael"}), (d{name:"Fine Gael"}) create (n)-[r:MEMBER_OF]->(d
 ```
 
 ## Queries
-1.Find the political party that has the highest number of female candidates.
+1.Find the political party that has the highest number of candidates elected.
 2.Find the political party that has the highest number of elected female candidates.
 3.Find the party with the lowest number of candidates
 
 #### Query One
-This query retreives the candidates that are a member of a party and are female, 
-and must return the party that has the highest number of female candidates.
+This query retreives the party with the highest number of candidates elected.
 ```cypher
-MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party) 
-WHERE n.gender = 'Female' 
+MATCH (n:Candidates)-[:MEMBER_OF]->(p:Party)
+WHERE n.elected = 'Yes' 
 RETURN p, count(*) AS c 
 ORDER BY c DESC LIMIT 1
 ```
